@@ -141,7 +141,7 @@ suite = {
             "native" : True,
             "description" : "Truffle Chrome Inspector support distribution for the GraalVM",
             "layout" : {
-                "native-image.properties" : "file:mx.tools/tools-chromeinspector.properties",
+                "native-image.properties" : "file:mx.tools\\tools-chromeinspector.properties",
             },
         },
         "TRUFFLE_PROFILER": {
@@ -171,7 +171,7 @@ suite = {
             "native" : True,
             "description" : "Truffle Profiler support distribution for the GraalVM",
             "layout" : {
-                "native-image.properties" : "file:mx.tools/tools-profiler.properties",
+                "native-image.properties" : "file:mx.tools\\tools-profiler.properties",
             },
         },
     },

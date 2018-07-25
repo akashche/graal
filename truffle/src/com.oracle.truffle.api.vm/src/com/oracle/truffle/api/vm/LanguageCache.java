@@ -196,7 +196,9 @@ final class LanguageCache implements Comparable<LanguageCache> {
                 if (languageHome == null && connection instanceof JarURLConnection) {
                     // (tfel): This seems a bit brittle, but is actually the best API
                     // for this I could find.
-                    Path path = Paths.get(((JarURLConnection) connection).getJarFileURL().getPath());
+                    String pathWithProtocol = ((JarURLConnection) connection).getJarFileURL().toString();
+                    String pathWithoutProtocol = pathWithProtocol.replaceAll("^file:/", "");
+                    Path path = Paths.get(pathWithoutProtocol);
                     languageHome = path.getParent().toString();
                 }
                 list.add(new LanguageCache(id, prefix, p, loader, languageHome));

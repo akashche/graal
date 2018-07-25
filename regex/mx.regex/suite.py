@@ -86,7 +86,7 @@ suite = {
       "native" : True,
       "description" : "TRegex support distribution for the GraalVM",
       "layout" : {
-        "native-image.properties" : "file:mx.regex/native-image.properties",
+        "native-image.properties" : "file:mx.regex\\native-image.properties",
       },
     },
   }

@@ -653,23 +653,23 @@ suite = {
       "testProject" : True,
     },
 
-    "com.oracle.truffle.nfi.test.native" : {
-      "subDir" : "src",
-      "native" : True,
-      "vpath" : True,
-      "results" : [
-        "bin/<lib:nativetest>",
-      ],
-      "buildDependencies" : [
-        "TRUFFLE_NFI_NATIVE",
-      ],
-      "buildEnv" : {
-        "TARGET" : "bin/<lib:nativetest>",
-        "CPPFLAGS" : "-I<path:TRUFFLE_NFI_NATIVE>/include",
-        "OS" : "<os>",
-      },
-      "testProject" : True,
-    },
+    #"com.oracle.truffle.nfi.test.native" : {
+    #  "subDir" : "src",
+    #  "native" : True,
+    #  "vpath" : True,
+    #  "results" : [
+    #    "bin/<lib:nativetest>",
+    #  ],
+    #  "buildDependencies" : [
+    #    "TRUFFLE_NFI_NATIVE",
+    #  ],
+    #  "buildEnv" : {
+    #    "TARGET" : "bin/<lib:nativetest>",
+    #    "CPPFLAGS" : "-I<path:TRUFFLE_NFI_NATIVE>/include",
+    #    "OS" : "<os>",
+    #  },
+    #  "testProject" : True,
+    #},
 
     "com.oracle.truffle.sl" : {
       "subDir" : "src",
@@ -982,28 +982,28 @@ suite = {
          "TRUFFLE_DSL_PROCESSOR",
          "TRUFFLE_DEBUG",
          "TRUFFLE_INSTRUMENT_TEST",
-         "TRUFFLE_TEST_NATIVE",
+         #"TRUFFLE_TEST_NATIVE",
          "TRUFFLE_TCK",
       ],
       "maven" : False,
      },
 
-     "TRUFFLE_TEST_NATIVE" : {
-       "native" : True,
-       "platformDependent" : True,
-       "output" : "<mxbuild>/truffle-test-native",
-       "dependencies" : [
-         "com.oracle.truffle.nfi.test.native",
-       ],
-       "testDistribution" : True,
-      "maven" : False,
-     },
+     #"TRUFFLE_TEST_NATIVE" : {
+     #  "native" : True,
+     #  "platformDependent" : True,
+     #  "output" : "<mxbuild>/truffle-test-native",
+     #  "dependencies" : [
+     #    "com.oracle.truffle.nfi.test.native",
+     #  ],
+     #  "testDistribution" : True,
+     # "maven" : False,
+     #},
 
     "TRUFFLE_GRAALVM_SUPPORT" : {
       "native" : True,
       "description" : "Truffle support distribution for the GraalVM",
       "layout" : {
-        "native-image.properties" : "file:mx.truffle/tools-truffle.properties",
+        "native-image.properties" : "file:mx.truffle\\tools-truffle.properties",
         "builder/" : "dependency:truffle:TRUFFLE_NFI",
       },
     },

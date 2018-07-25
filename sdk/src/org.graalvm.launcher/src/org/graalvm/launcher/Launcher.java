@@ -356,6 +356,8 @@ public abstract class Launcher {
     protected abstract void collectArguments(Set<String> options);
 
     private String executableName(String basename) {
+        return basename;
+        /*
         switch (OS.current) {
             case Linux:
             case Darwin:
@@ -364,6 +366,7 @@ public abstract class Launcher {
             default:
                 throw abort("executableName: OS not supported: " + OS.current);
         }
+        */
     }
 
     /**
